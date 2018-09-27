@@ -1,5 +1,5 @@
 {{--
-  Template Name: Custom Template
+  Template Name: Landing Page Template
 --}}
 
 @extends('layouts.app')
@@ -10,3 +10,5 @@
     @include('partials.content-page')
   @endwhile
 @endsection
+
+<h1>Testing</h1>
