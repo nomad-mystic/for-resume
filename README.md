@@ -2,9 +2,10 @@
 # Passion Impact Custom Theme 
 [![Build Status](https://travis-ci.com/PassionImpact/website-redesign-2018.svg?token=YqV6JTL4xf2nj5tdZMex&branch=master)](https://travis-ci.com/PassionImpact/website-redesign-2018) 
 
-Readme to come 
 ### Local Dev Setup 
-You are going to need to install a few things on your computer to get the local DEV ENV setup for theme development
+You are going to need to install a few things on your computer to get the local DEV ENV setup for theme development.
+
+Note: There are going to be some permission issues depending on your system and where your development files.
 
 #### PHP 7.2
 Mac: Taken from [Medium (Homebrew)](https://medium.com/@romaninsh/install-php-7-2-on-macos-high-sierra-with-homebrew-bdc4d1b04ea6)
@@ -50,6 +51,13 @@ Windows, Mac, Linux: [Install Portal](https://nodejs.org/en/download/)
 Dependency Node JS
 Windows, Mac, Linux: [Install Portal](https://yarnpkg.com/lang/en/docs/install/)
 
+
+### Setup theme 
+1. cd into theme folder 
+2. run composer install 
+3. run yarn install 
+4. log into Wordpress dashboard 
+5. Activate Passion impact theme 
 
 ### Uses [Sage](https://roots.io/sage/)
 [![Packagist](https://img.shields.io/packagist/vpre/roots/sage.svg?style=flat-square)](https://packagist.org/packages/roots/sage)
