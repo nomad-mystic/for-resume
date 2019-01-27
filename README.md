@@ -59,6 +59,22 @@ Windows, Mac, Linux: [Install Portal](https://yarnpkg.com/lang/en/docs/install/)
 4. log into Wordpress dashboard 
 5. Activate Passion impact theme 
 
+#### Notes
+You might need to change the permissions for the theme folder to able to edit the files in it. 
+
+Mac and Linux: 
+
+1. cd to themes folder 
+2. sudo chown -R \<user>:\<user> ./passion_impact
+
+Windows: Not sure 
+
+### Basic WordPress Setup
+There are a couple basic steps you are going to want to do when you start working in the Wordpress dashboard.
+
+1. Go to settings => permalinks change to "Post name" => Save Changes
+2. After you make a Home page go to Appearance => Customize => Homepage Settings Change it in the dropdown to Homepage that new page.
+
 ### Uses [Sage](https://roots.io/sage/)
 [![Packagist](https://img.shields.io/packagist/vpre/roots/sage.svg?style=flat-square)](https://packagist.org/packages/roots/sage)
 [![devDependency Status](https://img.shields.io/david/dev/roots/sage.svg?style=flat-square)](https://david-dm.org/roots/sage#info=devDependencies)
