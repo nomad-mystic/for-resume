@@ -25,6 +25,8 @@
   "stylelint": {
     "extends": "stylelint-config-standard",
     "rules": {
+      "selector-list-comma-newline-after": null,
+      "color-hex-length": "long",
       "no-empty-source": null,
       "at-rule-no-unknown": [
         true,
@@ -66,13 +68,13 @@
   },
   "devDependencies": {
     "autoprefixer": "~7.2.5",
-    "browser-sync": "~2.23.6",
+    "browser-sync": "^2.26.3",
     "browsersync-webpack-plugin": "^0.6.0",
     "bs-html-injector": "~3.0",
     "buble-loader": "^0.4.1",
     "cache-loader": "~1.2.0",
     "clean-webpack-plugin": "^0.1.18",
-    "copy-globs-webpack-plugin": "^0.2.0",
+    "copy-globs-webpack-plugin": "^0.3.0",
     "css-loader": "^0.28.9",
     "cssnano": "~v4.0.0-rc.2",
     "eslint": "~4.17.0",
@@ -82,7 +84,7 @@
     "file-loader": "^1.1.6",
     "friendly-errors-webpack-plugin": "^1.6.1",
     "imagemin-mozjpeg": "~7.0.0",
-    "imagemin-webpack-plugin": "~2.0.0",
+    "imagemin-webpack-plugin": "^2.4.2",
     "import-glob": "~1.5",
     "node-sass": "~4.9.4",
     "postcss-loader": "~2.1.0",
