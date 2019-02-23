@@ -1,15 +1,15 @@
 {
-  "name": "sage",
-  "version": "9.0.0",
-  "author": "Roots <team@roots.io>",
-  "homepage": "https://roots.io/sage/",
+  "name": "passion-impact-theme",
+  "version": "1.0.0",
+  "author": "Passion Impact Web Committee",
+  "homepage": "https://passionimpact.org",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git://github.com/roots/sage.git"
+    "url": "git://PassionImpact/website-redesign-2018"
   },
   "bugs": {
-    "url": "https://github.com/roots/sage/issues"
+    "url": "https://github.com/PassionImpact/website-redesign-2018/issues"
   },
   "licenses": [
     {
@@ -84,7 +84,7 @@
     "imagemin-mozjpeg": "~7.0.0",
     "imagemin-webpack-plugin": "~2.0.0",
     "import-glob": "~1.5",
-    "node-sass": "~4.7.2",
+    "node-sass": "~4.9.4",
     "postcss-loader": "~2.1.0",
     "postcss-safe-parser": "~3.0",
     "resolve-url-loader": "~2.2.1",

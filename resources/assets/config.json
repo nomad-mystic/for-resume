@@ -8,8 +8,8 @@
       "./scripts/customizer.js"
     ]
   },
-  "publicPath": "/wp-content/themes/passion_impact_theme",
-  "devUrl": "http://localhost:80/passion_impact",
+  "publicPath": "/wp-content/themes/passion_impact",
+  "devUrl": "http://localhost:9000",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [
