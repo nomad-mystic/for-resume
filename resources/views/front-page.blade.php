@@ -6,5 +6,3 @@
     @include('partials.content-page')
   @endwhile
 @endsection
-
-<h1>Testing front page</h1>
