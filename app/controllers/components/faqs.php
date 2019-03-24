@@ -45,9 +45,10 @@ class FaqsComponent extends Controller
      * @param string $postType
      * @return array $postsCustomFields
      */
-    static public function getPostCustomFields ($category, $postType): array
+    static public function getPostCustomFields (string $category, string $postType): array
     {
         $postsCustomFields = [];
+        $finalCustomFieldsArray = [];
         $posts = self::getPostsByCategory($category, $postType);
 
         // Loop through posts and make an array with just custom fields
@@ -69,7 +70,39 @@ class FaqsComponent extends Controller
                     }
                 }
             }
+
+            // Get the key and values so you can create the finial array
+            $keys = array_keys($postsCustomFields);
+            $values = array_values($postsCustomFields);
+
+            // Flatten the array of values to push onto finial array
+            $flattenedValues = self::flatten($values);
+
+            for ($field = 0; $field < count($postsCustomFields); $field++) {
+                if (isset($keys[$field]) && isset($flattenedValues[$field])) {
+                    $finalCustomFieldsArray[$field][0]  = $keys[$field];
+                    $finalCustomFieldsArray[$field][1] = $flattenedValues[$field];
+                }
+            }
         }
-        return $postsCustomFields;
+//        var_dump($finalCustomFieldsArray);
+        return $finalCustomFieldsArray;
+    }
+
+    /**
+     * @author Keith Murphy | nomadmystics@gmail.com
+     * @description This will flatten the array for pushing to final returned array
+     * @see https://stackoverflow.com/questions/1319903/how-to-flatten-a-multidimensional-array/14972389
+     * @param array $array
+     * @return array
+     */
+    static private function flatten(array $array) {
+        $return = [];
+
+        array_walk_recursive($array, function($a) use (&$return) {
+            $return[] = $a;
+        });
+
+        return $return;
     }
 }

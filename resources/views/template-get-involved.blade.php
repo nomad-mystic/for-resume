@@ -19,6 +19,6 @@ if (class_exists('\App\Controller\Components\FaqsComponent')) {
   {{--General Header--}}
   @include('partials.page-header')
   {{--Parital for this template--}}
-  @include('partials.get-involved.get-involved-page', ['customPostFields' => $customPostFields])
+  @include('partials.components.faqs', ['customPostFields' => $customPostFields])
   @endwhile
 @endsection
