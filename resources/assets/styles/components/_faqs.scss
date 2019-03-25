@@ -1,0 +1,51 @@
+.faqs {
+  width: 90vw;
+  margin: 0 auto;
+
+  .header {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .content {
+    padding: 0 20rem;
+  }
+
+  &__container {
+    border: 1px solid rgba(0, 0, 0, .5);
+  }
+
+  &__accordion-item {
+    display: block;
+
+    .title {
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    &.active {
+      //.accordion-title-row .accordion-arrow {
+      //  transform: rotate(-180deg);
+      //  //transition: ease .3s transform;
+      //}
+    }
+  }
+
+  &__accordion-content {
+    //transition: ease .3s all;
+    animation-name: fadeIn;
+    animation-duration: .6s;
+    animation-fill-mode: both;
+    will-change: transform;
+  }
+
+  .hidden {
+    display: none;
+  }
+}
+
+.fade-in {
+  animation-name: fadeIn;
+  animation-duration: .6s;
+  animation-fill-mode: both;
+}

@@ -26,6 +26,7 @@
     "extends": "stylelint-config-standard",
     "rules": {
       "selector-list-comma-newline-after": null,
+      "number-leading-zero": null,
       "color-hex-length": "long",
       "no-empty-source": null,
       "at-rule-no-unknown": [
@@ -105,7 +106,7 @@
     "yargs": "~11.0.0"
   },
   "dependencies": {
-    "font-awesome": "~4.7",
+    "@fortawesome/fontawesome-free": "^5.8.1",
     "foundation-sites": "~6.4",
     "jquery": "^3.3.1"
   }

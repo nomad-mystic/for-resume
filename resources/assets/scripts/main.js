@@ -11,6 +11,9 @@ import home from './routes/home';
 import aboutUs from './routes/about';
 import blog from './routes/blog';
 
+// Passion Impact Pages
+import getInvolved from './routes/get-involved';
+
 /** Populate Router instance with DOM routes */
 const routes = new Router({
   // All pages
@@ -21,6 +24,8 @@ const routes = new Router({
   aboutUs,
   // For the blog page
   blog,
+  // Passion Impact Pages
+  getInvolved,
 });
 
 // Load Events

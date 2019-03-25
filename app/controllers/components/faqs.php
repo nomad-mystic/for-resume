@@ -38,6 +38,16 @@ class FaqsComponent extends Controller
         return $posts;
     }
 
+    static public function getTheTitle (string $category, string $postType): string
+    {
+        $posts = self::getPostsByCategory($category, $postType);
+        if (isset($posts[0]->post_title)) {
+            return $posts[0]->post_title;
+        } else {
+            return '';
+        }
+    }
+
     /**
      * @author Keith Murphy | nomadmystics@gmail.com
      * @description This will return an array of values from the custom fields based on the category
@@ -85,7 +95,6 @@ class FaqsComponent extends Controller
                 }
             }
         }
-//        var_dump($finalCustomFieldsArray);
         return $finalCustomFieldsArray;
     }
 

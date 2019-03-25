@@ -8,9 +8,9 @@
       "./scripts/customizer.js"
     ]
   },
-  "publicPath": "/wp-content/themes/passion_impact",
-  "devUrl": "http://localhost:9000",
-  "proxyUrl": "http://localhost:3000",
+  "publicPath": "/app/themes/passion_impact",
+  "devUrl": "http://passionimpact.com",
+  "proxyUrl": "http://passionimpact.com:3000",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [
     "app/**/*.php",
