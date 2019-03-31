@@ -4,6 +4,7 @@ namespace App\Controller\Components;
 
 use Sober\Controller\Controller;
 use WP_Query;
+use App\Utils\ArrayUtils;
 
 /**
  * @author Keith Murphy | nomadmystics@gmail.com
@@ -50,6 +51,7 @@ class FaqsComponent extends Controller
 	{
 		$posts_custom_fields = [];
 		$final_custom_fields_array = [];
+		$flattened_values = [];
 		$posts = self::get_posts_py_category($category, $post_type);
 
 		// Loop through posts and make an array with just custom fields
@@ -77,7 +79,9 @@ class FaqsComponent extends Controller
 			$values = array_values($posts_custom_fields);
 
 			// Flatten the array of values to push onto finial array
-			$flattened_values = self::flatten($values);
+			if (class_exists('App\Utils\ArrayUtils')) {
+				$flattened_values = ArrayUtils::flatten($values);
+			}
 
 			for ($field = 0; $field < count($posts_custom_fields); $field++) {
 				if (isset($keys[$field]) && isset($flattened_values[$field])) {
@@ -97,22 +101,5 @@ class FaqsComponent extends Controller
         } else {
             return '';
         }
-    }
-
-    /**
-     * @author Keith Murphy | nomadmystics@gmail.com
-     * @description This will flatten the array for pushing to final returned array
-     * @see https://stackoverflow.com/questions/1319903/how-to-flatten-a-multidimensional-array/14972389
-     * @param array $array
-     * @return array
-     */
-    static private function flatten(array $array) {
-        $return = [];
-
-        array_walk_recursive($array, function($a) use (&$return) {
-            $return[] = $a;
-        });
-
-        return $return;
     }
 }
