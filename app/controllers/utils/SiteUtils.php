@@ -23,6 +23,11 @@ class SiteUtils
 		return "{$site_url_scheme}://{$site_url_host}";
 	}
 
+	/**
+	 * @author Keith Murphy | nomadmystics@gmail.com
+	 * @description Returns the src for the site logo
+	 * @return string
+	 */
 	static public function get_site_logo_image_src (): string
 	{
 		if (function_exists('get_theme_mod')) {

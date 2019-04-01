@@ -21,9 +21,11 @@ if (class_exists('App\Utils\SiteUtils')) {
         <div class="header__social-media">
         @if (isset($social_media_links) && !empty($social_media_links))
             @for ($field = 0; $field <= count($social_media_links); $field++)
-                @if (isset($social_media_links[$field]))
-                    <span>{{ $social_media_links[$field] }}</span>
-                @endif
+                @if (isset($social_media_links[$field][0]) && isset($social_media_links[$field][1]))
+                    <a href="{{ $social_media_links[$field][0] }}" target="_blank">
+                        <i class="fab fa-{{ $social_media_links[$field][1] }}"></i>
+                    </a>
+                    @endif
             @endfor
         @endif
         </div>

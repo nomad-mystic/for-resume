@@ -4,6 +4,11 @@ import 'jquery';
 // Import everything from autoload
 import "./autoload/**/*"
 
+// Util modules
+import fontAwesomeIcons from './util/site/fontAwesomeIcons';
+fontAwesomeIcons.exposeIcons();
+
+
 // import local dependencies
 import Router from './util/Router';
 import common from './routes/common';

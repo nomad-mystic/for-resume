@@ -33,11 +33,8 @@ class SocialMediaLinks extends Controller
 	    for ($i = 0; $i < count($keys); $i++) {
 	    	if (isset($keys[$i]) && !empty($keys[$i])) {
 			    $metadata[$i] = get_metadata('post', $object_id, "{$meta_key}-{$keys[$i]}");
+	    	    $metadata[$i][1] = $keys[$i];
 	    	}
-	    }
-
-	    if (class_exists('App\Utils\ArrayUtils')) {
-	        $metadata = ArrayUtils::flatten($metadata);
 	    }
 
 	    return $metadata;
