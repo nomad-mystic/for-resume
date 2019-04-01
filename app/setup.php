@@ -49,11 +49,23 @@ add_action('after_setup_theme', function () {
      */
     add_theme_support('post-thumbnails');
 
+	/**
+	 * Enable post thumbnails
+	 * @link https://codex.wordpress.org/Theme_Logo
+	 */
+    add_theme_support('custom-logo');
+
     /**
      * Enable HTML5 markup support
      * @link https://developer.wordpress.org/reference/functions/add_theme_support/#html5
      */
-    add_theme_support('html5', ['caption', 'comment-form', 'comment-list', 'gallery', 'search-form']);
+    add_theme_support('html5', [
+    	'caption',
+	    'comment-form',
+	    'comment-list',
+	    'gallery',
+	    'search-form',
+    ]);
 
     /**
      * Enable selective refresh for widgets in customizer

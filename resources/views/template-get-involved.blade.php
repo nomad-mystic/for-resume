@@ -3,13 +3,14 @@
 --}}
 
 <?php
-$category = 'Get Involved Student';
-$postType = 'passion_faqs';
-$customPostFields = [];
+use App\Controller\Components\FAQsComponent;$category = 'Get Involved Student';
+
+$post_type = 'passion_faqs';
+$custom_post_fields = [];
 
 if (class_exists('\App\Controller\Components\FaqsComponent')) {
-  $post_title = \App\Controller\Components\FaqsComponent::getTheTitle($category, $postType);
-  $customPostFields = \App\Controller\Components\FaqsComponent::getPostCustomFields($category, $postType);
+  $post_title = FAQsComponent::get_the_title($category, $post_type);
+  $custom_post_fields = FAQsComponent::get_post_custom_fields($category, $post_type);
 }
 
 ?>
@@ -22,7 +23,7 @@ if (class_exists('\App\Controller\Components\FaqsComponent')) {
   @include('partials.page-header')
   {{--Parital for this template--}}
   @include('partials.components.faqs', [
-      'customPostFields' => $customPostFields,
+      'customPostFields' => $custom_post_fields,
       'post_title' => $post_title,
     ])
   @endwhile
