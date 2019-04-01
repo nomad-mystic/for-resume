@@ -40,8 +40,6 @@ class SocialMediaLinks extends Controller
 	        $metadata = ArrayUtils::flatten($metadata);
 	    }
 
-	    var_dump($metadata);
-
 	    return $metadata;
     }
 }

@@ -17,7 +17,8 @@ class ArrayUtils
 	 * @param array $array
 	 * @return array
 	 */
-	static public function flatten(array $array) {
+	static public function flatten(array $array): array
+	{
 		$return = [];
 
 		array_walk_recursive($array, function($a) use (&$return) {
