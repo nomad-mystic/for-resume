@@ -1,0 +1,24 @@
+.light-button {
+  display: block;
+  border-radius: .5rem;
+  border: .1rem solid $base-grey;
+  font-size: 1.5rem;
+  font-family: $default-header-font-family;
+  transition: all .5s ease-in;
+
+  &:hover {
+    box-shadow: 0 .1rem 0 rgba(0, 0, 0, .5);
+    transform: translateY(-.03rem);
+  }
+
+  &:active {
+    box-shadow: 0 .05rem 0 rgba(0, 0, 0, .5);
+    transform: translateY(-.01rem);
+  }
+
+  a {
+    padding: 1rem;
+    display: block;
+    color: $base-grey;
+  }
+}
