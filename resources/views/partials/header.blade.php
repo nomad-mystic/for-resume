@@ -30,17 +30,30 @@ if (class_exists('App\Utils\SiteUtils')) {
         @endif
         </div>
         </section>
-        <nav class="header__nav-primary">
-            <div class="header__branding">
-                <img src="{{ $site_logo_src }}" alt="This is the main logo for the site. A tree with shaping the world map.">
-                <h2 class="header__title">Passion Impact</h2>
+        <section>
+            <div class="header__main-content">
+                <div class="header__branding-nav-wrapper">
+                    <div class="header__branding">
+                        <a href="@php(get_permalink())" class="header__site-link">
+                            <img src="{{ $site_logo_src }}" alt="This is the main logo for the site. A tree with shaping the world map.">
+                        </a>
+                        <h2 class="header__title">Passion Impact</h2>
+                    </div>
+                    <nav class="header__nav-primary">
+                    <span class="header__nav-bars">
+                        <i class="fas fa-bars"></i>
+                    </span>
+                        {{--                    @if (has_nav_menu('primary_navigation'))--}}
+                        {{--                        {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']) !!}--}}
+                        {{--                    @endif--}}
+                    </nav>
+                </div>
+                <div class="header__donate">
+                    <button  class="light-button">
+                        <a href="{{ $site_scheme_and_host }}/donate-today">DONATE</a>
+                    </button>
+                </div>
             </div>
-            @if (has_nav_menu('primary_navigation'))
-            {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']) !!}
-            @endif
-            <button>
-                <a href="{{ $site_scheme_and_host }}/donate-today">DONATE</a>
-            </button>
-        </nav>
+        </section>
     </div>
 </header>

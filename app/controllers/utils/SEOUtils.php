@@ -56,6 +56,6 @@ class SEOUtils
 
 		$jsonLDObject = json_encode($jsonLDObject);
 
-		return $jsonLDObject;
+		return !empty($jsonLDObject) ? $jsonLDObject : [];
 	}
 }

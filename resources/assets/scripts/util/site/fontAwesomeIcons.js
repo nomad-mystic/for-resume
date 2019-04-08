@@ -2,12 +2,25 @@
 // import then needed Font Awesome functionality
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
 // import the Facebook and Twitter icons
-import { faFacebook, faTwitter, faYoutube, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import {
+	faFacebook,
+	faTwitter,
+	faYoutube,
+	faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
+
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 export default {
 	exposeIcons: () => {
 		// add the imported icons to the library
-		library.add(faFacebook, faTwitter, faYoutube, faInstagram);
+		library.add(
+			faFacebook,
+			faTwitter,
+			faYoutube,
+			faInstagram,
+			faBars
+		);
 
 		// tell FontAwesome to watch the DOM and add the SVGs when it detects icon markup
 		dom.watch();
