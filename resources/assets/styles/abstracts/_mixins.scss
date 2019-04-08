@@ -4,3 +4,47 @@
   max-width: 100%;
   height: auto;
 }
+
+@mixin link-text() {
+  a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: $met-sans-semibold, $base-fonts;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:visited {
+      text-decoration: none;
+    }
+
+    &:active {
+      text-decoration: none;
+    }
+  }
+}
+
+$tablet-width: 667px;
+$laptop-width: 1028px;
+$desktop-width: 1600px;
+
+@mixin media-queries ($size) {
+  @if ('tablet' == $size) {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$laptop-width - 1px}) {
+      @content;
+    }
+  }
+
+  @else if ('laptop' == $size) {
+    @media (min-width: #{$laptop-width}) {
+      @content;
+    }
+  }
+
+  @else if ('desktop' == $size) {
+    @media (min-width: #{$desktop-width}) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+._404 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 50vh;
+
+  h1 {
+    font-family: $default-header-font-family;
+    font-size: 3rem;
+    text-align: center;
+
+    @include media-queries('laptop') {
+      font-size: 4rem;
+    }
+
+    @include media-queries('desktop') {
+      font-size: 5rem;
+    }
+  }
+
+  &__sub-title {
+    font-size: 1rem;
+    text-align: center;
+
+    @include media-queries('laptop') {
+      font-size: 1.5rem;
+    }
+
+    @include media-queries('desktop') {
+      font-size: 2rem;
+    }
+  }
+
+  > div {
+    margin: 1rem auto;
+  }
+}
