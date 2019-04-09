@@ -26,6 +26,7 @@ class SiteUtils
 	/**
 	 * @author Keith Murphy | nomadmystics@gmail.com
 	 * @description Returns the src for the site logo
+     * @todo Make sure this is active in live site
 	 * @return string
 	 */
 	static public function get_site_logo_image_src (): string

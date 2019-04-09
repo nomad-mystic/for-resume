@@ -34,7 +34,7 @@ if (class_exists('App\Utils\SiteUtils')) {
             <div class="header__main-content">
                 <div class="header__branding-nav-wrapper">
                     <div class="header__branding">
-                        <a href="@php(get_permalink())" class="header__site-link">
+                        <a href="{{ home_url() }}" class="site-link">
                             <img src="{{ $site_logo_src }}" alt="This is the main logo for the site. A tree with shaping the world map.">
                         </a>
                         <h2 class="header__title">Passion Impact</h2>

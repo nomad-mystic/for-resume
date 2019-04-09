@@ -41,11 +41,11 @@
 
   &__branding {
     order: 1;
-  }
 
-  &__site-link {
-    width: 3rem;
-    display: block;
+    .site-link {
+      width: 3rem;
+      display: block;
+    }
 
     img {
       @include responsive-image();

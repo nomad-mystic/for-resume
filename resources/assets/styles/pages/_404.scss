@@ -5,21 +5,51 @@
   align-items: center;
   height: 50vh;
 
-  h1 {
-    font-family: $default-header-font-family;
-    font-size: 3rem;
-    text-align: center;
+  > div {
+    margin: 1rem auto;
+  }
 
-    @include media-queries('laptop') {
-      font-size: 4rem;
+  &__branding {
+    order: 0;
+
+    .site-link {
+      padding: 10rem 0 0 0;
     }
 
-    @include media-queries('desktop') {
-      font-size: 5rem;
+    img {
+      width: 10rem;
+      height: auto;
+
+      @include media-queries('tablet') {
+        width: 11rem;
+      }
+
+      @include media-queries('laptop') {
+        width: 12rem;
+      }
+    }
+  }
+
+  .page-header {
+    order: 1;
+
+    h1 {
+      font-family: $default-header-font-family;
+      font-size: 3rem;
+      text-align: center;
+
+      @include media-queries('laptop') {
+        font-size: 4rem;
+      }
+
+      @include media-queries('desktop') {
+        font-size: 5rem;
+      }
     }
   }
 
   &__sub-title {
+    order: 2;
     font-size: 1rem;
     text-align: center;
 
@@ -32,7 +62,7 @@
     }
   }
 
-  > div {
-    margin: 1rem auto;
+  &__search-form {
+    order: 3;
   }
 }
