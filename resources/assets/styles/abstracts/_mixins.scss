@@ -8,7 +8,6 @@
 @mixin link-text() {
   a {
     text-decoration: none;
-    font-family: $default-header-font-family, $base-fonts;
 
     &:hover {
       text-decoration: none;

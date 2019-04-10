@@ -2,13 +2,10 @@
   This is the style for the header components and links. Including the NAV
  */
 
-.banner .nav {
-  @extend .menu;
-}
-
 .header {
   width: 100%;
   height: 20vh;
+  background: rgba(0, 0, 0, .25);
 
   &__sub-title {
     display: none;
@@ -22,16 +19,16 @@
     display: none;
   }
 
-  &__main-content {
+  &__main-content-flex {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
-    margin: auto 2rem;
+    margin: 1.5rem;
     height: 10vh;
   }
 
-  &__branding-nav-wrapper {
+  &__branding-nav-wrapper-flex {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -54,6 +51,8 @@
 
   &__nav-primary {
     order: 0;
+    //position: relative;
+    //z-index: 1;
   }
 
   &__nav-bars {
@@ -70,4 +69,38 @@
       }
     }
   }
+
+  #nav-primary-menu-container {
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, .9);
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateX(-150%);
+
+    @include media-queries('laptop') {
+      display: none;
+    }
+
+    .nav-primary-menu {
+      height: 20vh;
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: column;
+      align-items: center;
+
+      @include link-text();
+
+      a {
+        color: white;
+        font-size: 2rem;
+      }
+    }
+  }
 }
+
