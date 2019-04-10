@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
 
+$base-fonts: 'Arial', 'Helvetica', sans-serif;
 $default-header-font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
 $default-para-font-family: 'Open Sans', 'Arial', 'Helvetica', sans-serif;
+
+@font-face {
+  font-family: 'FontAwesome';
+}

@@ -43,7 +43,7 @@
     order: 1;
 
     .site-link {
-      width: 3rem;
+      width: 4rem;
       display: block;
     }
 
@@ -63,5 +63,11 @@
 
   &__donate {
     order: 2;
+
+    a {
+      &:hover {
+        color: $link-text-color;
+      }
+    }
   }
 }

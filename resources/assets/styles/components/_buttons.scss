@@ -1,10 +1,14 @@
 .light-button {
   display: block;
+  padding: 1rem;
   border-radius: .5rem;
   border: .1rem solid $base-grey;
   font-size: 1.5rem;
   font-family: $default-header-font-family;
+  color: $base-grey;
   transition: all .5s ease-in;
+
+  @include link-text();
 
   &:hover {
     box-shadow: 0 .1rem 0 rgba(0, 0, 0, .5);
@@ -20,5 +24,62 @@
     padding: 1rem;
     display: block;
     color: $base-grey;
+  }
+}
+
+// @see https://codepen.io/fox_hover/pen/bqZxLa
+$button-bg-5: #f28123;
+$border-radius: 6px;
+$overlay-color: #ffffff;
+
+/* effect-5 styles */
+.effect {
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: $link-text-color;
+  background: $button-bg-5;
+  text-transform: capitalize;
+
+  /* background-color: - add your own background-color */
+  //font: {
+  font-family: $default-header-font-family; /* put your font-family */
+  font-size: 1rem;
+  padding: 1.5rem .1rem;
+  width: 10rem;
+  border-radius: $border-radius;
+  overflow: hidden;
+}
+
+.effect.effect-5 {
+  transition: all 0.2s linear 0s;
+
+  &::before {
+    content: "\f054";
+    font-family: 'FontAwesome', 'Arial', 'Helvetica', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 30px;
+    background-color: rgba($overlay-color, .3);
+    border-radius: 0 50% 50% 0;
+    transform: scale(0, 1);
+    transform-origin: left center;
+    transition: all 0.2s linear 0s;
+  }
+
+  &:hover {
+    text-indent: 30px;
+    color: $link-text-color;
+
+    &::before {
+      transform: scale(1, 1);
+      text-indent: 0;
+    }
   }
 }

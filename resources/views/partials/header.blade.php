@@ -49,9 +49,7 @@ if (class_exists('App\Utils\SiteUtils')) {
                     </nav>
                 </div>
                 <div class="header__donate">
-                    <button  class="light-button">
-                        <a href="{{ $site_scheme_and_host }}/donate-today">DONATE</a>
-                    </button>
+                  <a href="{{ $site_scheme_and_host }}/donate-today" class="effect effect-5">DONATE</a>
                 </div>
             </div>
         </section>

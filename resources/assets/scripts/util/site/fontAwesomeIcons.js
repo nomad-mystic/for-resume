@@ -1,6 +1,6 @@
 // Add Font Awesome here for Tree shaking
 // import then needed Font Awesome functionality
-import { library, dom } from '@fortawesome/fontawesome-svg-core';
+import { config, library, dom } from '@fortawesome/fontawesome-svg-core';
 // import the Facebook and Twitter icons
 import {
 	faFacebook,
@@ -13,6 +13,8 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 export default {
 	exposeIcons: () => {
+    config.searchPseudoElements=true;
+
 		// add the imported icons to the library
 		library.add(
 			faFacebook,
