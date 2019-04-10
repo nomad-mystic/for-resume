@@ -39,8 +39,8 @@ if (class_exists('App\Utils\SiteUtils')) {
                         </a>
                         <h2 class="header__title">Passion Impact</h2>
                     </div>
-                    <nav class="header__nav-primary">
-                    <span class="header__nav-bars">
+                    <nav class="header__nav-primary" id="js-nav-primary">
+                    <span class="header__nav-bars" id="js-off-canvas-open">
                         <i class="fas fa-bars"></i>
                     </span>
                         {{--                    @if (has_nav_menu('primary_navigation'))--}}
