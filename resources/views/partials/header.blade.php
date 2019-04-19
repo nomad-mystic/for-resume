@@ -40,7 +40,7 @@ if (class_exists('App\Utils\SiteUtils')) {
             <h2 class="header__title">Passion Impact</h2>
           </div>
           <span class="header__nav-bars" id="js-off-canvas-open-span">
-            <i class="fas fa-bars isVisible" id="js-off-canvas-open-i"></i>
+            <i class="fas fa-bars" id="js-off-canvas-open-i"></i>
           </span>
         </div>
         <div class="header__donate">
@@ -48,8 +48,13 @@ if (class_exists('App\Utils\SiteUtils')) {
         </div>
       </div>
     </section>
-    <nav class="header__nav-primary isVisible" id="js-nav-primary">
+    <nav class="header__nav-primary" id="js-nav-primary">
       <div id="nav-primary-menu-container" class="">
+        <div class="close-icon-container">
+          <span class="header__nav-bars close-span" id="js-off-canvas-close-span">
+            <i class="fas fa-plus close-i" id="js-off-canvas-close-i"></i>
+          </span>
+        </div>
         @if (has_nav_menu('primary_navigation'))
           {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav-primary-menu']) !!}
         @endif

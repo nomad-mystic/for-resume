@@ -9,7 +9,7 @@ import {
 	faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faPlus } from "@fortawesome/free-solid-svg-icons";
 
 export default {
 	exposeIcons: () => {
@@ -21,7 +21,8 @@ export default {
 			faTwitter,
 			faYoutube,
 			faInstagram,
-			faBars
+			faBars,
+      faPlus
 		);
 
 		// tell FontAwesome to watch the DOM and add the SVGs when it detects icon markup

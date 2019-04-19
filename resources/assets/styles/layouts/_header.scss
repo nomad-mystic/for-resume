@@ -4,7 +4,7 @@
 
 .header {
   width: 100%;
-  height: 20vh;
+  height: 10vh;
   background: rgba(0, 0, 0, .25);
 
   &__sub-title {
@@ -24,7 +24,7 @@
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
-    margin: 1.5rem;
+    margin: 0 1.5rem;
     height: 10vh;
   }
 
@@ -81,7 +81,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    transform: translateX(-150%);
+    animation: open-off-canvas-nav .05s ease-in-out;
+    animation-play-state: paused;
 
     @include media-queries('laptop') {
       display: none;
@@ -101,6 +102,21 @@
         font-size: 2rem;
       }
     }
+
+    .close-icon-container {
+      position: relative;
+      height: 5rem;
+
+      .close-span {
+        position: absolute;
+        right: 2rem;
+
+        .close-i {
+          color: white;
+          transform: rotate(45deg);
+          transform-origin: 0;
+        }
+      }
+    }
   }
 }
-

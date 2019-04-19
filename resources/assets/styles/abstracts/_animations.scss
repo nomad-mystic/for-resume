@@ -9,3 +9,29 @@
     opacity: 1;
   }
 }
+
+// For the off-canvas nav
+@keyframes open-off-canvas-nav {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes close-off-canvas-nav {
+  from {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(-150%);
+  }
+}
+
