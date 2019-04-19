@@ -4,16 +4,24 @@
  */
 export default {
   activate: () => {
+    // DOM Elements
     const navOffCanvasOpenSpan = window.document.getElementById('js-off-canvas-open-span');
     const navOffCanvasCloseSpan = window.document.getElementById('js-off-canvas-close-span');
     const navPrimaryMenuContainer = window.document.getElementById('nav-primary-menu-container');
 
+    // Open the off canvas navigation
     navOffCanvasOpenSpan.addEventListener('click', () => {
-      navPrimaryMenuContainer.style.animationPlayState = 'running';
+      // Common CSS properties
+      navPrimaryMenuContainer.style.transition = 'all .5s ease-in-out';
+
+      navPrimaryMenuContainer.classList.remove('to-close');
+      navPrimaryMenuContainer.classList.add('to-open');
     }, false);
 
+    // Close the off canvas navigation
     navOffCanvasCloseSpan.addEventListener('click', () => {
-      navPrimaryMenuContainer.style.animationPlayState = 'running';
+      navPrimaryMenuContainer.classList.remove('to-open');
+      navPrimaryMenuContainer.classList.add('to-close');
     }, false);
   },
 }

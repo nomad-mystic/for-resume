@@ -49,7 +49,7 @@ if (class_exists('App\Utils\SiteUtils')) {
       </div>
     </section>
     <nav class="header__nav-primary" id="js-nav-primary">
-      <div id="nav-primary-menu-container" class="">
+      <div id="nav-primary-menu-container">
         <div class="close-icon-container">
           <span class="header__nav-bars close-span" id="js-off-canvas-close-span">
             <i class="fas fa-plus close-i" id="js-off-canvas-close-i"></i>

@@ -51,8 +51,6 @@
 
   &__nav-primary {
     order: 0;
-    //position: relative;
-    //z-index: 1;
   }
 
   &__nav-bars {
@@ -81,8 +79,18 @@
     left: 0;
     right: 0;
     bottom: 0;
-    animation: open-off-canvas-nav .05s ease-in-out;
-    animation-play-state: paused;
+    opacity: 0;
+    transform: translateX(-100%);
+
+    &.to-open {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+
+    &.to-close {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
 
     @include media-queries('laptop') {
       display: none;
