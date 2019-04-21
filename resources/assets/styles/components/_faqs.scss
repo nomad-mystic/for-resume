@@ -1,51 +1,69 @@
 .faqs {
   width: 90vw;
-  margin: 0 auto;
+  margin: 10rem auto 1rem;
 
-  .header {
-    font-size: 3rem;
-    text-align: center;
-  }
+  &__header {
+    margin: 3rem auto;
 
-  .content {
-    padding: 0 20rem;
+    .title {
+      font-size: 3rem;
+      text-align: center;
+      line-height: 1.5;
+    }
   }
 
   &__container {
-    border: 1px solid rgba(0, 0, 0, .5);
+    border: 1px solid $base-grey;
+    border-bottom: none;
   }
 
   &__accordion-item {
     display: block;
 
     .title {
+      font-family: $default-para-font-family;
       font-size: 2rem;
-      text-align: center;
+      text-align: left;
+      padding: 3rem 0 3rem 1rem;
+      cursor: pointer;
+      position: relative;
+      border-bottom: 2px solid $base-grey;
+
+      span {
+        position: absolute;
+        right: 3rem;
+        transition: all .1s ease-in;
+
+        &.active {
+          transform: rotate(45deg);
+          transform-origin: center;
+        }
+      }
     }
 
-    &.active {
-      //.accordion-title-row .accordion-arrow {
-      //  transform: rotate(-180deg);
-      //  //transition: ease .3s transform;
-      //}
+    // @todo This is not working
+    &:last-child {
+      border-bottom: none;
     }
   }
 
   &__accordion-content {
-    //transition: ease .3s all;
+    //transition: ease 3s all;
+    background: $base-grey;
     animation-name: fadeIn;
-    animation-duration: .6s;
+    animation-duration: .5s;
     animation-fill-mode: both;
     will-change: transform;
+
+    .content {
+      padding: 3rem 4rem;
+      font-size: 1.5rem;
+      text-align: left;
+      line-height: 1.5;
+    }
   }
 
   .hidden {
     display: none;
   }
-}
-
-.fade-in {
-  animation-name: fadeIn;
-  animation-duration: .6s;
-  animation-fill-mode: both;
 }

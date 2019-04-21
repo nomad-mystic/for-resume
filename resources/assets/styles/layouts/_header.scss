@@ -5,7 +5,7 @@
 .header {
   width: 100%;
   height: 10vh;
-  background: rgba(0, 0, 0, .25);
+  background: $base-grey;
 
   &__sub-title {
     display: none;
