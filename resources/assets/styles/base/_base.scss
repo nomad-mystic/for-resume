@@ -13,3 +13,9 @@ html {
 body {
   box-sizing: border-box;
 }
+
+// For the whole content wrapper
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+}

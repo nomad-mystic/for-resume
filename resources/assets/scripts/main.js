@@ -18,6 +18,7 @@ import blog from './routes/blog';
 
 // Passion Impact Pages
 import getInvolved from './routes/get-involved';
+import howToBeACatalyst from './routes/how-to-be-a-catalyst';
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
@@ -31,6 +32,7 @@ const routes = new Router({
   blog,
   // Passion Impact Pages
   getInvolved,
+  howToBeACatalyst,
 });
 
 // Load Events

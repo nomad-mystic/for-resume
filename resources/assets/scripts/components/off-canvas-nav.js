@@ -10,7 +10,8 @@ export default {
     const navPrimaryMenuContainer = window.document.getElementById('nav-primary-menu-container');
 
     // Open the off canvas navigation
-    navOffCanvasOpenSpan.addEventListener('click', () => {
+    navOffCanvasOpenSpan.addEventListener('click', (event) => {
+      console.log(event);
       // Common CSS properties
       navPrimaryMenuContainer.style.transition = 'all .5s ease-in-out';
 

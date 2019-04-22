@@ -42,8 +42,8 @@ class FaqsComponent extends Controller
 
 	/**
 	 * @author Keith Murphy | nomadmystics@gmail.com
-	 * @param string $category
-	 * @param string $post_type
+	 * @param string $category @example get-involved-student
+	 * @param string $post_type @example passion_faqs
 	 * @return array $postsCustomFields
 	 * @description This will return an array of values from the custom fields based on the category
 	 */
@@ -54,23 +54,17 @@ class FaqsComponent extends Controller
 		$flattened_values = [];
 		$posts = self::get_posts_py_category($category, $post_type);
 
-		// Loop through posts and make an array with just custom fields
+		// Loop through posts and make an array with just custom fields for current post category
 		if (isset($posts) && !empty($posts)) {
 			foreach ($posts as $post) {
 				if (isset($post->ID)) {
-					$posts_custom = get_post_custom($post->ID);
+				    $post_category = get_the_category($post->ID);
+				    $category_name = $post_category[0]->cat_name;
 
-					if (!empty($posts_custom)) {
-
-						if (isset($posts_custom['_edit_lock'])) {
-							unset($posts_custom['_edit_lock']);
-						}
-						if (isset($posts_custom['_edit_last'])) {
-							unset($posts_custom['_edit_last']);
-						}
-
-						$posts_custom_fields = $posts_custom;
-					}
+				    // Make sure it is the right category for the template
+                    if ($category_name === $category) {
+                        $posts_custom_fields = get_fields($post->ID);
+                    }
 				}
 			}
 
@@ -83,6 +77,7 @@ class FaqsComponent extends Controller
 				$flattened_values = ArrayUtils::flatten($values);
 			}
 
+			// Rebuild and format the array for template ingestion
 			for ($field = 0; $field < count($posts_custom_fields); $field++) {
 				if (isset($keys[$field]) && isset($flattened_values[$field])) {
 					$final_custom_fields_array[$field][0]  = $keys[$field];
@@ -90,9 +85,17 @@ class FaqsComponent extends Controller
 				}
 			}
 		}
+
 		return $final_custom_fields_array;
 	}
 
+    /**
+     * @author Keith Murphy | nomadmystics@gmail.com
+     * @description Get the current title for the post to use in template
+     * @param string $category
+     * @param string $post_type
+     * @return string
+     */
 	static public function get_the_title (string $category, string $post_type): string
     {
         $posts = self::get_posts_py_category($category, $post_type);
