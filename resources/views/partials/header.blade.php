@@ -16,23 +16,28 @@ if (class_exists('App\Utils\SiteUtils')) {
 
 <header>
   <div class="header">
-    <h3 class="header__sub-title">Empowering students to chase their passions through community service</h3>
     <section>
-    <div class="header__social-media">
-    @if (isset($social_media_links) && !empty($social_media_links))
-        @for ($field = 0; $field <= count($social_media_links); $field++)
-            @if (isset($social_media_links[$field][0]) && isset($social_media_links[$field][1]))
-                <a href="{{ $social_media_links[$field][0] }}" target="_blank">
+      <div class="header__secondary-content">
+        <h3 class="sub-title">Empowering students to chase their passions through community service</h3>
+        <section>
+          <div class="social-media">
+            @if (isset($social_media_links) && !empty($social_media_links))
+              @for ($field = 0; $field <= count($social_media_links); $field++)
+                @if (isset($social_media_links[$field][0]) && isset($social_media_links[$field][1]))
+                  <a href="{{ $social_media_links[$field][0] }}" target="_blank" class="link">
                     <i class="fab fa-{{ $social_media_links[$field][1] }}"></i>
-                </a>
+                  </a>
                 @endif
-        @endfor
-    @endif
-    </div>
+              @endfor
+            @endif
+          </div>
+        </section>
+      </div>
     </section>
+    <hr>
     <section>
       <div class="header__main-content-flex">
-        <div class="header__branding-nav-wrapper-flex">
+        <div class="header__branding-nav-branding-flex">
           <div class="header__branding">
             <a href="{{ home_url() }}" class="site-link">
               <img src="{{ $site_logo_src }}" alt="This is the main logo for the site. A tree with shaping the world map.">
@@ -43,22 +48,35 @@ if (class_exists('App\Utils\SiteUtils')) {
             <i class="fas fa-bars" id="js-off-canvas-open-i"></i>
           </span>
         </div>
-        <div class="header__donate">
-          <a href="{{ $site_scheme_and_host }}/donate-today" class="effect effect-5">DONATE</a>
+        <div class="header__nav-container-flex">
+          <div class="header__donate">
+            <a href="{{ $site_scheme_and_host }}/donate-today" class="effect effect-5">DONATE</a>
+          </div>
+          <div class="header__large-nav">
+            <nav>
+              @if (has_nav_menu('primary_navigation'))
+                {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav-primary-menu']) !!}
+              @endif
+            </nav>
+          </div>
         </div>
       </div>
     </section>
-    <nav class="header__nav-primary" id="js-nav-primary">
-      <div id="nav-primary-menu-container">
-        <div class="close-icon-container">
+    <section>
+      <div class="header__nav-primary" id="js-nav-primary">
+        <div id="nav-primary-menu-container">
+          <div class="close-icon-container">
           <span class="header__nav-bars close-span" id="js-off-canvas-close-span">
             <i class="fas fa-plus close-i" id="js-off-canvas-close-i"></i>
           </span>
+          </div>
+          <nav>
+            @if (has_nav_menu('primary_navigation'))
+              {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav-primary-menu']) !!}
+            @endif
+          </nav>
         </div>
-        @if (has_nav_menu('primary_navigation'))
-          {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav-primary-menu']) !!}
-        @endif
       </div>
-    </nav>
+    </section>
   </div>
 </header>

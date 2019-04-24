@@ -29,7 +29,7 @@ $desktop-width: 1600px;
 
 @mixin media-queries ($size) {
   @if ('tablet' == $size) {
-    @media (min-width: #{$tablet-width}) and (max-width: #{$laptop-width - 1px}) {
+    @media (min-width: #{$tablet-width}) {
       @content;
     }
   }
