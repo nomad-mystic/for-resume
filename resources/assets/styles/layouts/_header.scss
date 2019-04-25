@@ -27,7 +27,7 @@
       }
     }
 
-    @include media-queries('laptop') {
+    @include media-queries('tablet') {
       display: flex;
       justify-content: space-between;
       margin: 0 auto;
@@ -96,7 +96,6 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    //width: 8rem;
     justify-content: space-around;
   }
 
@@ -231,7 +230,7 @@
   hr {
     display: none;
 
-    @include media-queries('laptop') {
+    @include media-queries('tablet') {
       display: inline-block;
       width: 100%;
     }
