@@ -42,7 +42,7 @@ if (class_exists('App\Utils\SiteUtils')) {
             <a href="{{ home_url() }}" class="site-link">
               <img src="{{ $site_logo_src }}" alt="This is the main logo for the site. A tree with shaping the world map.">
             </a>
-            <h2 class="header__title">Passion Impact</h2>
+            <h2 class="title">Passion Impact</h2>
           </div>
           <span class="header__nav-bars" id="js-off-canvas-open-span">
             <i class="fas fa-bars" id="js-off-canvas-open-i"></i>

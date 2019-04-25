@@ -8,14 +8,6 @@
   background: $base-grey;
   margin: 0 auto;
 
-  &__title {
-    display: none;
-
-    @include media-queries('tablet') {
-      display: block;
-    }
-  }
-
   &__secondary-content {
     display: none;
     max-width: 1200px;
@@ -35,7 +27,7 @@
       }
     }
 
-    @include media-queries('tablet') {
+    @include media-queries('laptop') {
       display: flex;
       justify-content: space-between;
       margin: 0 auto;
@@ -46,7 +38,7 @@
   &__large-nav {
     display: none;
 
-    @include media-queries('tablet') {
+    @include media-queries('laptop') {
       display: inline-block;
 
       ul {
@@ -57,7 +49,7 @@
         font-size: 1.25rem;
 
         li {
-          margin: 0 0 0 1.5rem;
+          margin: 0 0 0 1.25rem;
 
           a {
             text-decoration: none;
@@ -94,7 +86,7 @@
   }
 
   &__nav-container-flex {
-    @include media-queries('tablet') {
+    @include media-queries('laptop') {
       display: flex;
       align-items: center;
     }
@@ -104,7 +96,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 8rem;
+    //width: 8rem;
     justify-content: space-around;
   }
 
@@ -114,14 +106,36 @@
     .site-link {
       width: 4rem;
       display: block;
+      margin: 0 0 0 .5rem;
+
+      @include media-queries('laptop') {
+        width: 5rem;
+      }
+    }
+
+    .title {
+      display: none;
+      font-family: $default-para-font-family;
 
       @include media-queries('tablet') {
-        width: 8rem;
+        display: block;
+        margin: 0 0 0 1rem;
+        font-size: 1.75rem;
       }
     }
 
     img {
       @include responsive-image();
+    }
+
+    @include media-queries('tablet') {
+      display: flex;
+      align-items: center;
+      margin: 0 0 0 1rem;
+    }
+
+    @include media-queries('laptop') {
+      margin: 0 0 0 0;
     }
   }
 
@@ -135,7 +149,7 @@
     font-size: 3rem;
     cursor: pointer;
 
-    @include media-queries('tablet') {
+    @include media-queries('laptop') {
       display: none;
     }
   }
@@ -149,7 +163,7 @@
       }
     }
 
-    @include media-queries('tablet') {
+    @include media-queries('laptop') {
       margin: 0 0 0 2rem;
     }
   }
@@ -178,7 +192,7 @@
       transform: translateX(-100%);
     }
 
-    @include media-queries('tablet') {
+    @include media-queries('laptop') {
       display: none;
     }
 
@@ -217,7 +231,7 @@
   hr {
     display: none;
 
-    @include media-queries('tablet') {
+    @include media-queries('laptop') {
       display: inline-block;
       width: 100%;
     }
