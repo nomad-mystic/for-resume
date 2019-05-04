@@ -3,7 +3,7 @@
 <div class="faqs">
   <article>
     <header class="faqs__header">
-      <h3 class="title">{{ $post_title }}</h3>
+      <h3 class="title">{{ __($post_title) }}</h3>
     </header>
     <div class="faqs__container">
 			@if (isset($custom_post_fields) && !empty($custom_post_fields))
@@ -11,13 +11,13 @@
 					@if (isset($custom_post_fields[$field][0]) && isset($custom_post_fields[$field][1]))
 						<section class="faqs__accordion-item">
               <h2 class="title">
-                {{ $custom_post_fields[$field][0] }}
+                {{ __($custom_post_fields[$field][0]) }}
                 <span>
                   <i class="fas fa-plus"></i>
                 </span>
               </h2>
               <div class="faqs__accordion-content hidden">
-							  <p class="content">{{ $custom_post_fields[$field][1] }}</p>
+							  <p class="content">{{ __($custom_post_fields[$field][1]) }}</p>
 							</div>
 						</section>
 					@endif
