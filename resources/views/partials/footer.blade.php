@@ -14,4 +14,12 @@
       @include('partials.components.social-media')
     </div>
   </div>
+  <div class="footer__newsletter">
+    @include('partials.components.newsletter')
+  </div>
+  <hr>
+  <div class="footer__copyright">
+    <p>&copy;2019 - Passion Impact is a registered 501(C)3 Public Charity. EIN #: 46-5118525.</p>
+    <p>A proud member of the AmeriCorps National Service Network.</p>
+  </div>
 </footer>
