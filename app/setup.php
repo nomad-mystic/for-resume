@@ -94,10 +94,10 @@ add_action('widgets_init', function () {
         'name'          => __('Primary', 'Passion'),
         'id'            => 'sidebar-primary'
     ] + $config);
-    register_sidebar([
-        'name'          => __('Footer Navigation', 'Passion'),
-        'id'            => 'footer-navigation'
-    ] + $config);
+//    register_sidebar([
+//        'name'          => __('Footer Navigation', 'Passion'),
+//        'id'            => 'footer-navigation'
+//    ] + $config);
 });
 
 /**
