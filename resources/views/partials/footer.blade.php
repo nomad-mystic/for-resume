@@ -8,7 +8,34 @@
   <div class="footer__contact">
     <h3>Contact</h3>
     <div class="contact-details">
-      @php(dynamic_sidebar('footer-contact'))
+      <?php
+        add_filter( 'my_sidebar_output', 'my_widget_filter' );
+        ob_start();
+        dynamic_sidebar( 'footer-contact' );
+        $sidebar_output = ob_get_clean();
+//        var_dump($sidebar_output);
+        echo apply_filters( 'my_sidebar_output', $sidebar_output );
+
+      function my_widget_filter( $sidebar_output ) {
+
+        var_dump($sidebar_output);
+        /**
+         * Perform some kind of search and replace here on $sidebar_output.
+         * Regular Expressions will likely be required in order to restrict your
+         * modifications to only the widgets you wish to modify, since $sidebar_output
+         * contains the output of the entire sidebar, including all widgets.
+         */
+        $dom = new DOMDocument;
+        libxml_use_internal_errors(true);
+        $dom->loadHTML('<?xml encoding="UTF-8">' . $sidebar_output);
+
+        var_dump($dom);
+        $dom->saveHTML();
+        return $dom;
+
+      }
+
+      ?>
     </div>
     <div class="social-media">
       @include('partials.components.social-media')

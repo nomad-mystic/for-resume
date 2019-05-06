@@ -31,6 +31,16 @@
   &__contact {
     margin: 0 auto;
     color: white;
+
+    .contact-details {
+      h3 {
+        color: white;
+      }
+    }
+
+    .social-media {
+      display: none;
+    }
   }
 
   &__newsletter {
