@@ -1,8 +1,13 @@
 .footer {
   background: $base-grey;
-  display: flex;
-  flex-direction: column;
+  padding: 1rem 0;
   text-align: center;
+
+  @include media-queries('tablet') {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
 
   h3 {
     font-family: $default-header-font-family;
@@ -52,6 +57,10 @@
     width: 100%;
     margin: 0 auto 1rem;
 
+    @include media-queries('tablet') {
+      grid-area: 2 / 1 / 2 / 5;
+    }
+
     h4 {
       color: $base-mid-grey;
       font-size: 1.25rem;
@@ -81,6 +90,10 @@
     margin: 1.25rem auto;
     font-size: 1.25rem;
     padding: 0 2rem;
+
+    @include media-queries('tablet') {
+      grid-area: 3 / 1 / 3 / 4;
+    }
 
     p {
       margin: 1rem auto;
