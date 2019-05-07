@@ -9,11 +9,15 @@ import {
 	faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 
-import { faBars, faPlus } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBars,
+  faPlus,
+  faCalendarDay,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default {
 	exposeIcons: () => {
-    config.searchPseudoElements=true;
+    config.searchPseudoElements = true;
 
 		// add the imported icons to the library
 		library.add(
@@ -22,7 +26,8 @@ export default {
 			faYoutube,
 			faInstagram,
 			faBars,
-      faPlus
+      faPlus,
+      faCalendarDay
 		);
 
 		// tell FontAwesome to watch the DOM and add the SVGs when it detects icon markup

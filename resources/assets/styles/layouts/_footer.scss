@@ -5,36 +5,39 @@
   text-align: center;
 
   h3 {
-    font-family: $default-para-font-family;
+    font-family: $default-header-font-family;
     margin: 2rem auto;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: $base-dark-grey;
   }
 
   a {
-    color: white;
+    display: block;
+    font-family: $default-para-font-family;
+    font-size: 1.25rem;
+    color: $base-mid-grey;
     text-decoration: none;
-    line-height: 2;
-    padding: 1rem;
+    line-height: 1;
+    padding: .5rem 1rem;
   }
 
   &__navigation {
     margin: 0 auto;
-    color: white;
+    color: $base-mid-grey;
   }
 
   &__about-pi {
     margin: 0 auto;
-    color: white;
+    color: $base-mid-grey;
   }
 
   &__contact {
     margin: 0 auto;
-    color: white;
+    color: $base-mid-grey;
 
     .contact-details {
       h3 {
-        color: white;
+        color: $base-mid-grey;
       }
     }
 
@@ -46,5 +49,42 @@
   &__newsletter {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    margin: 0 auto 1rem;
+
+    h4 {
+      color: $base-mid-grey;
+      font-size: 1.25rem;
+    }
+
+    input {
+      font-family: 'FontAwesome', $base-fonts;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: inherit;
+      width: 95%;
+      padding: .5rem;
+      margin: 1rem auto;
+      border-radius: 3px;
+    }
+
+    button {
+      width: 95%;
+      margin: 0 auto;
+      padding: .5rem;
+      font-family: $default-para-font-family;
+      cursor: pointer;
+    }
+  }
+
+  &__copyright {
+    margin: 1.25rem auto;
+    font-size: 1.25rem;
+    padding: 0 2rem;
+
+    p {
+      margin: 1rem auto;
+      line-height: 1.5;
+    }
   }
 }
