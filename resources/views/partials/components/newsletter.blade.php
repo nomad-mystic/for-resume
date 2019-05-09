@@ -1,8 +1,10 @@
 <section>
     <div class="newsletter">
-        <h3>Newsletter</h3>
-        <h4>Join our monthly mailing list</h4>
-        <form action="">
+        <div class="text-content">
+          <h3>Newsletter</h3>
+          <h4>Join our monthly mailing list</h4>
+        </div>
+        <form action="" class="newsletter__form">
             <input id="newsletter" type="text"
                    placeholder="&#xf783; Email">
             <button type="submit" class="rounded-button">Subscribe</button>
