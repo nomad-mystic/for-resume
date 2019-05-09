@@ -12,12 +12,13 @@ import {
 import {
   faBars,
   faPlus,
-  faCalendarDay,
+  faCalendarCheck,
 } from "@fortawesome/free-solid-svg-icons";
 
 export default {
 	exposeIcons: () => {
     config.searchPseudoElements = true;
+    // config.showMissingIcons = true;
 
 		// add the imported icons to the library
 		library.add(
@@ -27,7 +28,7 @@ export default {
 			faInstagram,
 			faBars,
       faPlus,
-      faCalendarDay
+      faCalendarCheck
 		);
 
 		// tell FontAwesome to watch the DOM and add the SVGs when it detects icon markup

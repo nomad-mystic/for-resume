@@ -1,4 +1,4 @@
-import apiStrings from '../util/strings/apiStrings';
+// import apiStrings from '../util/strings/apiStrings';
 
 /**
  * @description This will build out all of the blog posts
@@ -15,16 +15,16 @@ export default {
      * @todo Expand this to be more defencive and build out the DOM
      * @return void
      */
-    fetch(`${apiStrings.getAllPostsByCategory(2)}`)
-      .then(res => {
-        return res.json();
-      })
-      .then(json => {
-        console.log(json);
-      })
-      .catch(err => {
-        console.error('Error:', err.message);
-      });
+    // fetch(`${apiStrings.getAllPostsByCategory(2)}`)
+    //   .then(res => {
+    //     return res.json();
+    //   })
+    //   .then(json => {
+    //     console.log(json);
+    //   })
+    //   .catch(err => {
+    //     console.error('Error:', err.message);
+    //   });
   },
   finalize() {
     // JavaScript to be fired on the blog page, after the init JS

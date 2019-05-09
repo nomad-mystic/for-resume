@@ -6,7 +6,7 @@
         </div>
         <form action="" class="newsletter__form">
             <input id="newsletter" type="text"
-                   placeholder="&#xf783; Email">
+                   placeholder="&#xf274; Email">
             <button type="submit" class="rounded-button">Subscribe</button>
         </form>
     </div>
