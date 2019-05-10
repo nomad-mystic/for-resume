@@ -17,7 +17,6 @@ if (class_exists('App\Utils\SiteUtils')) {
         @include('partials.components.social-media')
       </div>
     </section>
-    <hr>
     <section>
       <div class="header__main-content-flex">
         <div class="header__branding-nav-branding-flex">

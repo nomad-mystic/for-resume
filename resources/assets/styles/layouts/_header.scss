@@ -7,6 +7,13 @@
   height: auto;
   background: $base-grey;
   margin: 0 auto;
+  border-bottom: 2px solid $base-grey;
+
+  section:nth-child(1) {
+    @include media-queries('tablet') {
+      border-bottom: 2px solid $base-grey;
+    }
+  }
 
   &__secondary-content {
     display: none;
