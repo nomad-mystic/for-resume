@@ -1,0 +1,26 @@
+.home-create-impact {
+  .title {
+    font-family: $default-para-font-family;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .sub-title {
+    font-family: $default-para-font-family;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 1.5rem auto 0;
+  }
+
+  .detail {
+    padding: 1rem;
+
+    &__title {
+      text-align: center;
+    }
+
+    &__copy-text {
+      text-align: center;
+    }
+  }
+}

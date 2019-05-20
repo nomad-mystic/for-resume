@@ -9,6 +9,8 @@ use App\Utils\ArrayUtils;
 /**
  * @author Keith Murphy | nomadmystics@gmail.com
  * Class FaqsComponent
+ * @todo Use controller ACF module for easier extraction of the the FQAs fields
+ * @see https://github.com/soberwp/controller#advanced-custom-fields-module
  * @package App\Controller\Components
  */
 class FaqsComponent extends Controller

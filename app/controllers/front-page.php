@@ -11,14 +11,19 @@ use Sober\Controller\Controller;
  */
 class FrontPage extends Controller
 {
-    public function get_create_impact_options ()
+    /**
+     * @author Keith Murphy | nomadmystics@gmail.com
+     * @description Get option values from Create Impact Settings options admin page
+     * @return array
+     */
+    public function get_create_impact_options (): array
     {
-        $values = get_option('passion_create_impact_options');
-        var_dump($values);
-        return $values;
-//        var_dump($values);
-//        if (class_exists('App\PassionPlugins\HomeSettings\PassionCreateImpactHomeSettings')) {
-//
-//        }
+        if (class_exists('App\PassionPlugins\HomeSettings\PassionCreateImpactHomeSettings')) {
+            $values = get_option('passion_create_impact_options');
+
+            return $values;
+        }
+
+        return [];
     }
 }
