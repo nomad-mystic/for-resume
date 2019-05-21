@@ -1,0 +1,40 @@
+.home-create-impact {
+  .title {
+    font-family: $default-header-font-family;
+    font-size: 3.5rem;
+    text-align: center;
+    font-weight: bold;
+    color: $base-dark-grey;
+  }
+
+  .sub-title {
+    font-family: $default-para-font-family;
+    font-size: 1.5rem;
+    text-align: center;
+    color: $base-mid-grey;
+    margin: 1.5rem auto;
+    padding: 0 2rem;
+  }
+
+  .detail {
+    padding: 1rem 2rem;
+
+    &__title {
+      font-family: $default-header-font-family;
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+      color: $base-dark-grey;
+      margin: 1rem 0 1.5rem;
+    }
+
+    &__copy-text {
+      font-family: $default-para-font-family;
+      font-size: 1.5rem;
+      text-align: center;
+      line-height: 1.5;
+      color: $base-mid-grey;
+      padding: 0 2rem;
+    }
+  }
+}
